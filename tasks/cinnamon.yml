@@ -1,0 +1,12 @@
+---
+- name: Install cinnamon packages
+  become: true
+  kewlfft.aur.aur:
+    name: "{{ cinnamon_packages }}"
+    use: yay
+    state: present
+- name: Enable lightdm
+  become: true
+  service:
+    name: lightdm
+    enabled: true

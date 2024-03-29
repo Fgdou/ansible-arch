@@ -7,3 +7,4 @@
     - import_tasks: tasks/pacman_config.yml
     - import_tasks: tasks/base_packages.yml
     - import_tasks: tasks/yay_install.yml
+    - import_tasks: tasks/cinnamon.yml
