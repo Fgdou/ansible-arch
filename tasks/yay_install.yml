@@ -4,6 +4,7 @@
     cmd: yay -h
   ignore_errors: true
   register: yay
+  changed_when: false
 - name: install yay
   become: true
   shell:
