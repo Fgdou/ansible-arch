@@ -11,3 +11,16 @@
   copy:
     src: files/ssh_config
     dest: ~/.ssh/config
+- name: config dir
+  file:
+    path: ~/.config
+    state: directory
+- name: git config dir
+  file:
+    path: ~/.config/git
+    state: directory
+- name: ssh config
+  copy:
+    src: files/git_config
+    dest: ~/.config/git/config
+  
