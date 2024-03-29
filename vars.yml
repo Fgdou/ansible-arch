@@ -37,6 +37,9 @@ user_packages:
   - steam
   - visual-studio-code-bin
   - teamviewer
+  - docker
+  - docker-compose
+  - docker-buildx
 
 cinnamon_packages:
   - cinnamon
@@ -55,3 +58,4 @@ service_list:
   - NetworkManager
   - teamviewerd
   - bluetooth
+  - docker
