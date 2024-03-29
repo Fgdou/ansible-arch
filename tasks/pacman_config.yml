@@ -1,0 +1,18 @@
+---
+# tasks file for pacman_setup
+- name: Copy pacman config
+  become: true
+  copy:
+    src: files/pacman.conf
+    dest: /etc/pacman.conf
+- name: Install reflector
+  become: true
+  pacman:
+    state: present
+    name: reflector
+  register: reflector
+- name: Update mirrorlist
+  become: true
+  when: reflector.packages != []
+  shell:
+    cmd: sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist

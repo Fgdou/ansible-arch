@@ -1,0 +1,11 @@
+---
+- name: verify yay install
+  shell: 
+    cmd: yay -h
+  ignore_errors: true
+  register: yay
+- name: install yay
+  become: true
+  shell:
+    cmd: git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
+  when: yay.rc != 0

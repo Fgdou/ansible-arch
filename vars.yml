@@ -1,0 +1,50 @@
+base_packages:
+  - base
+  - base-devel
+  - linux
+  - linux-firmware
+  - sudo
+  - dhcpcd
+  - networkmanager
+  - openssh
+  - vim
+  - git
+  - tree
+  - wget
+  - nmap
+  - bind
+  - net-tools
+  - htop
+  - cmake
+  - make
+  - htop
+  - wine
+  - gdu
+  - stow
+
+user_packages:
+  - lutris
+  - discord
+  - spotify-launcher
+  - prismlauncher-bin
+  - libreoffice-fresh
+  - vlc
+  - obs-studio
+  - kdenlive
+  - google-chrome
+  - steam
+
+cinnamon_packages:
+  - cinnamon
+  - gnome-system-monitor
+  - lightdm
+  - gnome-screenshot
+  - alsa
+  - xviewer
+  - xreader
+  - papirus-icon-theme
+  - noto-fonts-emoji
+
+service_list:
+  - sshd
+  - NetworkManager
