@@ -19,7 +19,7 @@
   file:
     path: ~/.config/git
     state: directory
-- name: ssh config
+- name: git config
   copy:
     src: files/git_config
     dest: ~/.config/git/config
