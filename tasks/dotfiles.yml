@@ -1,0 +1,13 @@
+---
+- name: bashrc
+  copy:
+    src: files/.bashrc
+    dest: ~/.bashrc
+- name: ssh directory
+  file:
+    path: ~/.ssh
+    state: directory
+- name: ssh config
+  copy:
+    src: files/ssh_config
+    dest: ~/.ssh/config

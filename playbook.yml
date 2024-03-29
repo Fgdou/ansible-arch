@@ -9,3 +9,4 @@
     - import_tasks: tasks/yay_install.yml
     - import_tasks: tasks/cinnamon.yml
     - import_tasks: tasks/packages.yml
+    - import_tasks: tasks/dotfiles.yml
