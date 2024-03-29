@@ -1,0 +1,13 @@
+---
+- name: install user packages
+  become: true
+  kewlfft.aur.aur:
+    name: "{{ user_packages }}"
+    use: yay
+    state: present
+- name: enable services
+  become: true
+  service:
+    name: "{{ item }}"
+    enabled: true
+  loop: "{{ service_list }}"
