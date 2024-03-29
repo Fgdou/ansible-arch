@@ -21,6 +21,8 @@ base_packages:
   - wine
   - gdu
   - stow
+  - bluez
+  - bluez-utils
 
 user_packages:
   - lutris
@@ -46,8 +48,10 @@ cinnamon_packages:
   - xreader
   - papirus-icon-theme
   - noto-fonts-emoji
+  - blueberry
 
 service_list:
   - sshd
   - NetworkManager
   - teamviewerd
+  - bluetooth
