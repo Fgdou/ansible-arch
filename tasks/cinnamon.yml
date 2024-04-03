@@ -11,6 +11,10 @@
   service:
     name: lightdm
     enabled: true
+- name: Picture folder
+  file:
+    path: ~/Pictures
+    state: directory
 - name: Copy background
   copy:
     src: Wolf.jpg
