@@ -42,6 +42,8 @@ base_packages:
   - firefox
   - rustup
   - virt-manager
+  - jre17-openjdk
+  - jdk17-openjdk
 
 user_packages:
   - google-chrome
