@@ -25,4 +25,8 @@
     src: discord_settings.json
     dest: ~/.config/discord/settings.json
     force: false
+- name: Configuring mimeapps
+  copy:
+    src: mimeapps.list
+    dest: ~/.config/mimeapps.list
   
