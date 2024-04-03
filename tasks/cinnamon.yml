@@ -57,7 +57,6 @@
     cmd: dconf load / < /tmp/dconf.txt
 - name: lightdm background
   become: true
-  lineinfile:
+  template:
+    src: files/lightdm_conf.conf
     dest: /etc/lightdm/lightdm-gtk-greeter.conf
-    regexp: '^#background=$'
-    line: 'background=/home/{{ user }}/Pictures/background.jpg'
