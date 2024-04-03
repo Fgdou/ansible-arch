@@ -9,6 +9,7 @@
   git:
     repo: https://aur.archlinux.org/yay-bin.git
     dest: /tmp/yay-bin
+  when: yay.rc != 0
 - name: install yay
   shell:
     cmd: cd /tmp/yay-bin && makepkg -sif --noconfirm
