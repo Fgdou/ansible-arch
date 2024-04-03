@@ -57,6 +57,7 @@ cinnamon_packages:
   - blueberry
   - gnome-calculator
   - nemo-fileroller
+  - gnome-terminal
 
 service_list:
   - sshd
