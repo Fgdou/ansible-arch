@@ -13,6 +13,12 @@
   shell:
     cmd: cd /tmp/yay-bin && makepkg -sif --noconfirm
   when: yay.rc != 0
+- name: Create the `aur_builder` user
+  become: yes
+  ansible.builtin.user:
+    name: aur_builder
+    create_home: yes
+    group: sudo
 - name: Allow the `aur_builder` user to run `sudo pacman` without a password
   become: true
   ansible.builtin.lineinfile:

@@ -1,6 +1,7 @@
 ---
 - name: Install cinnamon packages
   become: true
+  become_user: aur_builder
   kewlfft.aur.aur:
     name: "{{ cinnamon_packages }}"
     use: yay
