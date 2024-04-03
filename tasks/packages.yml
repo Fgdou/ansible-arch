@@ -12,6 +12,10 @@
     name: "{{ item }}"
     enabled: true
   loop: "{{ service_list }}"
+- name: ssh folder
+  file:
+    path: ~/.ssh
+    state: directory
 - name: OpenSSH key
   community.crypto.openssh_keypair:
     path: ~/.ssh/id_ed25519
