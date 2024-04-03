@@ -48,6 +48,16 @@
   copy:
     src: applet_perf.json
     dest: ~/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23/prefs.json
+- name: create file configuration
+  template:
+    src: files/dconf.txt
+    dest: /tmp/dconf.txt
 - name: Import configuration
   shell:
-    cmd: dconf load / < ./files/dconf.txt
+    cmd: dconf load / < /tmp/dconf.txt
+- name: lightdm background
+  become: true
+  lineinfile:
+    dest: /etc/lightdm/lightdm-gtk-greeter.conf
+    regexp: '^#background=$'
+    line: 'background=/home/{{ user }}/Pictures/background.jpg'

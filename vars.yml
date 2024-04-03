@@ -1,3 +1,5 @@
+user: fgdou
+
 base_packages:
   - base
   - base-devel

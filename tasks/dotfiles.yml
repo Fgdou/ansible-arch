@@ -1,6 +1,6 @@
 ---
 - name: bashrc
-  copy:
+  template:
     src: files/.bashrc
     dest: ~/.bashrc
 - name: ssh directory
