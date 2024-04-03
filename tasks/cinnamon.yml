@@ -9,7 +9,6 @@
     - ~/.config/cinnamon
     - ~/.config/cinnamon/spices
     - ~/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23
-    - ~/Pictures
     - ~/.themes
 - name: Install cinnamon packages
   become: true
@@ -24,9 +23,10 @@
     name: lightdm
     enabled: true
 - name: Copy background
+  become: true
   copy:
     src: Wolf.jpg
-    dest: ~/Pictures/background.jpg
+    dest: /usr/share/pixmaps/background.jpg
 - name: Install theme
   unarchive:
     dest: ~/.themes
