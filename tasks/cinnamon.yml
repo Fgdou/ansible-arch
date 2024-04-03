@@ -26,6 +26,7 @@
 - name: Install theme
   unarchive:
     dest: ~/.themes
+    creates: ~/.themes/CBlack/
     remote_src: true
     src: https://github.com/Cloweling/cblack/releases/download/v3.0.0/Theme.CBlack.zip
 - name: Applying style
