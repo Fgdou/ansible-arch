@@ -11,6 +11,7 @@
     - ~/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23
     - ~/.config/cinnamon/spices/power@cinnamon.org
     - ~/.config/cinnamon/spices/grouped-window-list@cinnamon.org
+    - ~/.config/cinnamon/spices/calendar@cinnamon.org
     - ~/.themes
 - name: Installing cinnamon packages
   become: true
@@ -55,6 +56,10 @@
   copy:
     src: applets/group-window.json
     dest: ~/.config/cinnamon/spices/grouped-window-list@cinnamon.org/2.json
+- name: Configuring calendar applet
+  copy:
+    src: applets/calendar.json
+    dest: ~/.config/cinnamon/spices/calendar@cinnamon.org/13.json
 - name: Creating dconf file configuration
   template:
     src: files/dconf.txt
