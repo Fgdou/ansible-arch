@@ -63,3 +63,4 @@ service_list:
   - teamviewerd
   - bluetooth
   - docker
+  - systemd-timesyncd
