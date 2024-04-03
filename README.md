@@ -8,10 +8,6 @@ This ansible is used for the setup of my Arch-Linux machines. This ensure replic
 
 # Run
 ```shell
-# Install dependencies
-sudo pacman -S git ansible ansible-core
-ansible-galaxy install -r requirements.yml
-
-# Run
-ansible-playbook playbook.yml --ask-become-pass
+make install
+make run
 ```
