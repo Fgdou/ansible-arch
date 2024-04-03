@@ -1,17 +1,17 @@
 ---
 # tasks file for pacman_setup
-- name: Copy pacman config
+- name: Configuring pacman
   become: true
   copy:
     src: files/pacman.conf
     dest: /etc/pacman.conf
-- name: Install reflector
+- name: Installing reflector
   become: true
   pacman:
     state: present
     name: reflector
   register: reflector
-- name: Update mirrorlist
+- name: Updating mirrorlist
   become: true
   when: reflector.packages != []
   shell:

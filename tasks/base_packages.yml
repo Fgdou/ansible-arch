@@ -1,5 +1,5 @@
 ---
-- name: Install base package
+- name: Installing pacman packages
   become: true
   pacman:
     name: "{{ base_packages }}"

@@ -1,33 +1,26 @@
 ---
-- name: bashrc
+- name: Creating directories for dotfiles
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - ~/.ssh
+    - ~/.config
+    - ~/.config/git
+    - ~/.config/discord
+- name: Configuring .bashrc
   template:
     src: files/.bashrc
     dest: ~/.bashrc
-- name: ssh directory
-  file:
-    path: ~/.ssh
-    state: directory
-- name: ssh config
+- name: COnfiguring ssh
   copy:
     src: files/ssh_config
     dest: ~/.ssh/config
-- name: config dir
-  file:
-    path: ~/.config
-    state: directory
-- name: git config dir
-  file:
-    path: ~/.config/git
-    state: directory
-- name: git config
+- name: Configuring git
   copy:
     src: files/git_config
     dest: ~/.config/git/config
-- name: discord config dir
-  file:
-    path: ~/.config/discord
-    state: directory
-- name: disabling discord autoupdate
+- name: Configuring discord
   copy:
     src: discord_settings.json
     dest: ~/.config/discord/settings.json

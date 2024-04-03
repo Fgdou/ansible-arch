@@ -1,5 +1,5 @@
 ---
-- name: Directories
+- name: Creating directories for cinnamon configuration
   file:
     path: "{{ item }}"
     state: directory
@@ -11,53 +11,53 @@
     - ~/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23
     - ~/.config/cinnamon/spices/power@cinnamon.org
     - ~/.themes
-- name: Install cinnamon packages
+- name: Installing cinnamon packages
   become: true
   pacman:
     name: "{{ cinnamon_packages }}"
-- name: Enable lightdm
+- name: Enabling lightdm
   become: true
   service:
     name: lightdm
     enabled: true
-- name: Copy background
+- name: Copy background image
   become: true
   copy:
     src: Wolf.jpg
     dest: /usr/share/pixmaps/background.jpg
-- name: Install theme
+- name: Install CBlack theme
   unarchive:
     dest: ~/.themes
     creates: ~/.themes/CBlack/
     remote_src: true
     src: https://github.com/Cloweling/cblack/releases/download/v3.0.0/Theme.CBlack.zip
-- name: Applying style
+- name: Applying cinnamon desktop style
   copy:
     src: cinnamon.css
     dest: ~/.themes/CBlack/cinnamon/cinnamon.css
-- name: Install applets
+- name: Installing cinnamon applets
   unarchive:
     creates: "~/.local/share/cinnamon/applets/{{ item }}"
     dest: ~/.local/share/cinnamon/applets/
     remote_src: true
     src: "https://cinnamon-spices.linuxmint.com/files/applets/{{ item }}.zip"
   loop: "{{ cinnamon_applets }}"
-- name: Applet monitor config
+- name: Configuring system monitor applet
   copy:
     src: applets/applet_perf.json
     dest: ~/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23/prefs.json
-- name: Applet power config
+- name: Configuring power applet
   copy:
     src: applets/power.json
     dest: ~/.config/cinnamon/spices/power@cinnamon.org/power@cinnamon.org.json
-- name: create file configuration
+- name: Creating dconf file configuration
   template:
     src: files/dconf.txt
     dest: /tmp/dconf.txt
-- name: Import configuration
+- name: Importing dconf configuration
   shell:
     cmd: dconf load / < /tmp/dconf.txt
-- name: lightdm background
+- name: Setting lightdm background
   become: true
   template:
     src: files/lightdm_conf.conf

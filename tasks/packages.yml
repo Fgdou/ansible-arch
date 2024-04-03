@@ -1,22 +1,22 @@
 ---
-- name: install user packages
+- name: Installing aur packages
   become: yes
   become_user: aur_builder
   kewlfft.aur.aur:
     name: "{{ user_packages }}"
     use: yay
     state: present
-- name: enable services
+- name: Enabling services
   become: true
   service:
     name: "{{ item }}"
     enabled: true
   loop: "{{ service_list }}"
-- name: ssh folder
+- name: Creating ssh folder
   file:
     path: ~/.ssh
     state: directory
-- name: OpenSSH key
+- name: Creating OpenSSH key
   community.crypto.openssh_keypair:
     path: ~/.ssh/id_ed25519
     regenerate: never

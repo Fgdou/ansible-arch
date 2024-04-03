@@ -1,26 +1,26 @@
 ---
-- name: verify yay install
+- name: Verifying yay install
   shell: 
     cmd: yay -h
   ignore_errors: true
   register: yay
   changed_when: false
-- name: download yay
+- name: Downloading yay
   git:
     repo: https://aur.archlinux.org/yay-bin.git
     dest: /tmp/yay-bin
   when: yay.rc != 0
-- name: install yay
+- name: Installing yay
   shell:
     cmd: cd /tmp/yay-bin && makepkg -sif --noconfirm
   when: yay.rc != 0
-- name: Create the `aur_builder` user
+- name: Creating aur_builder user
   become: yes
   ansible.builtin.user:
     name: aur_builder
     create_home: yes
     group: sudo
-- name: Allow the `aur_builder` user to run `sudo pacman` without a password
+- name: Allowing the `aur_builder` user to run `sudo pacman` without a password
   become: true
   ansible.builtin.lineinfile:
     path: /etc/sudoers.d/11-install-aur_builder
