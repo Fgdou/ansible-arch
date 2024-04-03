@@ -40,6 +40,7 @@ base_packages:
   - steam
   - teamviewer
   - firefox
+  - rustup
 
 user_packages:
   - google-chrome
