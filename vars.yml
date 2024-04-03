@@ -32,7 +32,6 @@ user_packages:
   - lutris
   - discord
   - spotify-launcher
-  - prismlauncher-bin
   - libreoffice-fresh
   - vlc
   - obs-studio
@@ -44,6 +43,7 @@ user_packages:
   - docker
   - docker-compose
   - docker-buildx
+  - firefox
 
 cinnamon_packages:
   - cinnamon
