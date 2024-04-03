@@ -12,3 +12,8 @@
     name: "{{ item }}"
     enabled: true
   loop: "{{ service_list }}"
+- name: OpenSSH key
+  community.crypto.openssh_keypair:
+    path: ~/.ssh/id_ed25519
+    regenerate: never
+    type: ed25519
