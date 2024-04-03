@@ -10,3 +10,16 @@
   service:
     name: lightdm
     enabled: true
+- name: Copy background
+  copy:
+    src: Wolf.jpg
+    dest: ~/Pictures/background.jpg
+- name: Install theme
+  unarchive:
+    dest: ~/.themes
+    remote_src: true
+    src: https://github.com/Cloweling/cblack/releases/download/v3.0.0/Theme.CBlack.zip
+- name: Applying style
+  copy:
+    src: cinnamon.css
+    dest: ~/.themes/CBlack/cinnamon/cinnamon.css
