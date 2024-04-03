@@ -47,6 +47,7 @@ cinnamon_packages:
   - cinnamon
   - gnome-system-monitor
   - lightdm
+  - lightdm-gtk-greeter
   - gnome-screenshot
   - alsa
   - xviewer
