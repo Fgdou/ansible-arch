@@ -41,6 +41,7 @@ base_packages:
   - teamviewer
   - firefox
   - rustup
+  - virt-manager
 
 user_packages:
   - google-chrome
