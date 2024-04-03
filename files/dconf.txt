@@ -8,6 +8,7 @@ picture-uri='file:///usr/share/pixmaps/background.jpg'
 [org/cinnamon/desktop/interface]
 gtk-theme='CBlack'
 icon-theme='Papirus-Dark'
+color-scheme='prefer-dark'
 
 [org/cinnamon/desktop/keybindings]
 custom-list=['__dummy__', 'custom0']
@@ -39,6 +40,7 @@ name='CBlack'
 [org/gnome/desktop/interface]
 gtk-theme='CBlack'
 icon-theme='Papirus-Dark'
+color-scheme='prefer-dark'
 
 [org/gnome/libgnomekbd/keyboard]
 layouts=['us\talt-intl']
