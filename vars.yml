@@ -23,6 +23,8 @@ base_packages:
   - stow
   - bluez
   - bluez-utils
+  - zip
+  - unzip
 
 user_packages:
   - lutris
@@ -53,6 +55,7 @@ cinnamon_packages:
   - noto-fonts-emoji
   - blueberry
   - gnome-calculator
+  - nemo-fileroller
 
 service_list:
   - sshd
