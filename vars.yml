@@ -52,6 +52,7 @@ cinnamon_packages:
   - papirus-icon-theme
   - noto-fonts-emoji
   - blueberry
+  - gnome-calculator
 
 service_list:
   - sshd
