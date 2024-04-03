@@ -11,7 +11,7 @@
     dest: /tmp/yay-bin
 - name: install yay
   shell:
-    cmd: cd /tmp/yay-bin && makepkg -si
+    cmd: cd /tmp/yay-bin && makepkg -sif --noconfirm
   when: yay.rc != 0
 - name: Allow the `aur_builder` user to run `sudo pacman` without a password
   become: true
