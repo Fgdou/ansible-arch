@@ -10,8 +10,9 @@ gtk-theme='CBlack'
 icon-theme='Papirus-Dark'
 color-scheme='prefer-dark'
 
-[org/cinnamon/desktop/keybindings]
+g/cinnamon/desktop/keybindings]
 custom-list=['__dummy__', 'custom0']
+looking-glass-keybinding=@as []
 
 [org/cinnamon/desktop/keybindings/custom-keybindings/custom0]
 binding=['<Primary><Shift>Escape']
@@ -20,11 +21,14 @@ name='monitor'
 
 [org/cinnamon/desktop/keybindings/media-keys]
 area-screenshot-clip=['Print']
+calculator=['<Super>c']
 next=['XF86AudioNext', '<Alt>Right']
 pause=['XF86AudioPause', '<Alt>space']
 play=['XF86AudioPlay']
 previous=['XF86AudioPrev', '<Alt>Left']
+screensaver=['<Super>l', 'XF86ScreenSaver']
 screenshot=@as []
+terminal=['<Super>t']
 
 [org/cinnamon/desktop/keybindings/wm]
 activate-window-menu=@as []
