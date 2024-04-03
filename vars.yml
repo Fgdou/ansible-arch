@@ -59,6 +59,10 @@ cinnamon_packages:
   - nemo-fileroller
   - gnome-terminal
 
+cinnamon_applets:
+  - multicore-sys-monitor@ccadeptic23
+  - temperature@fevimu
+
 service_list:
   - sshd
   - NetworkManager

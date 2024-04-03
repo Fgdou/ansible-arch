@@ -1,4 +1,16 @@
 ---
+- name: Directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - ~/.local/share/cinnamon
+    - ~/.local/share/cinnamon/applets
+    - ~/.config/cinnamon
+    - ~/.config/cinnamon/spices
+    - ~/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23
+    - ~/Pictures
+    - ~/.themes
 - name: Install cinnamon packages
   become: true
   become_user: aur_builder
@@ -11,18 +23,10 @@
   service:
     name: lightdm
     enabled: true
-- name: Picture folder
-  file:
-    path: ~/Pictures
-    state: directory
 - name: Copy background
   copy:
     src: Wolf.jpg
     dest: ~/Pictures/background.jpg
-- name: Theme folder
-  file:
-    path: ~/.themes
-    state: directory
 - name: Install theme
   unarchive:
     dest: ~/.themes
@@ -33,6 +37,17 @@
   copy:
     src: cinnamon.css
     dest: ~/.themes/CBlack/cinnamon/cinnamon.css
+- name: Install applets
+  unarchive:
+    creates: "~/.local/share/cinnamon/applets/{{ item }}"
+    dest: ~/.local/share/cinnamon/applets/
+    remote_src: true
+    src: "https://cinnamon-spices.linuxmint.com/files/applets/{{ item }}.zip"
+  loop: "{{ cinnamon_applets }}"
+- name: System perf config
+  copy:
+    src: applet_perf.json
+    dest: ~/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23/prefs.json
 - name: Import configuration
   shell:
     cmd: dconf load / < ./files/dconf.txt
