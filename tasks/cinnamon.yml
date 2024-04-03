@@ -14,6 +14,10 @@
   copy:
     src: Wolf.jpg
     dest: ~/Pictures/background.jpg
+- name: Theme folder
+  file:
+    path: ~/.themes
+    state: directory
 - name: Install theme
   unarchive:
     dest: ~/.themes
@@ -23,3 +27,6 @@
   copy:
     src: cinnamon.css
     dest: ~/.themes/CBlack/cinnamon/cinnamon.css
+- name: Import configuration
+  shell:
+    cmd: dconf load / < ./files/dconf.txt
