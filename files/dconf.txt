@@ -10,7 +10,7 @@ gtk-theme='CBlack'
 icon-theme='Papirus-Dark'
 color-scheme='prefer-dark'
 
-g/cinnamon/desktop/keybindings]
+[org/cinnamon/desktop/keybindings]
 custom-list=['__dummy__', 'custom0']
 looking-glass-keybinding=@as []
 
