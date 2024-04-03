@@ -12,11 +12,8 @@
     - ~/.themes
 - name: Install cinnamon packages
   become: true
-  become_user: aur_builder
-  kewlfft.aur.aur:
+  pacman:
     name: "{{ cinnamon_packages }}"
-    use: yay
-    state: present
 - name: Enable lightdm
   become: true
   service:

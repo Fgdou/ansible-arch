@@ -1,5 +1,5 @@
 ---
 - name: Install base package
   become: true
-  community.general.pacman:
+  pacman:
     name: "{{ base_packages }}"

@@ -27,8 +27,9 @@ base_packages:
   - bluez-utils
   - zip
   - unzip
-
-user_packages:
+  - docker
+  - docker-compose
+  - docker-buildx
   - lutris
   - discord
   - spotify-launcher
@@ -36,14 +37,14 @@ user_packages:
   - vlc
   - obs-studio
   - kdenlive
-  - google-chrome
   - steam
-  - visual-studio-code-bin
   - teamviewer
-  - docker
-  - docker-compose
-  - docker-buildx
   - firefox
+
+user_packages:
+  - google-chrome
+  - visual-studio-code-bin
+  - prismlauncher-qt5-bin
 
 cinnamon_packages:
   - cinnamon
@@ -51,7 +52,7 @@ cinnamon_packages:
   - lightdm
   - lightdm-gtk-greeter
   - gnome-screenshot
-  - alsa
+  - alsa-utils
   - xviewer
   - xreader
   - papirus-icon-theme
