@@ -5,9 +5,13 @@
   ignore_errors: true
   register: yay
   changed_when: false
+- name: download yay
+  git:
+    repo: https://aur.archlinux.org/yay-bin.git
+    dest: /tmp/yay-bin
 - name: install yay
   shell:
-    cmd: git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
+    cmd: cd /tmp/yay-bin && makepkg -si
   when: yay.rc != 0
 - name: Allow the `aur_builder` user to run `sudo pacman` without a password
   become: true
