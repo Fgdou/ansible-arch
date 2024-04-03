@@ -23,4 +23,13 @@
   copy:
     src: files/git_config
     dest: ~/.config/git/config
+- name: discord config dir
+  file:
+    path: ~/.config/discord
+    state: directory
+- name: disabling discord autoupdate
+  copy:
+    src: discord_settings.json
+    dest: ~/.config/discord/settings.json
+    force: false
   
