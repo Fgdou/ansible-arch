@@ -10,6 +10,7 @@
     - ~/.config/cinnamon/spices
     - ~/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23
     - ~/.config/cinnamon/spices/power@cinnamon.org
+    - ~/.config/cinnamon/spices/grouped-window-list@cinnamon.org
     - ~/.themes
 - name: Installing cinnamon packages
   become: true
@@ -50,6 +51,10 @@
   copy:
     src: applets/power.json
     dest: ~/.config/cinnamon/spices/power@cinnamon.org/power@cinnamon.org.json
+- name: Configuring group window applet
+  copy:
+    src: applets/group-window.json
+    dest: ~/.config/cinnamon/spices/grouped-window-list@cinnamon.org/2.json
 - name: Creating dconf file configuration
   template:
     src: files/dconf.txt
