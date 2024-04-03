@@ -9,6 +9,7 @@
     - ~/.config/cinnamon
     - ~/.config/cinnamon/spices
     - ~/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23
+    - ~/.config/cinnamon/spices/power@cinnamon.org
     - ~/.themes
 - name: Install cinnamon packages
   become: true
@@ -41,10 +42,14 @@
     remote_src: true
     src: "https://cinnamon-spices.linuxmint.com/files/applets/{{ item }}.zip"
   loop: "{{ cinnamon_applets }}"
-- name: System perf config
+- name: Applet monitor config
   copy:
-    src: applet_perf.json
+    src: applets/applet_perf.json
     dest: ~/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23/prefs.json
+- name: Applet power config
+  copy:
+    src: applets/power.json
+    dest: ~/.config/cinnamon/spices/power@cinnamon.org/power@cinnamon.org.json
 - name: create file configuration
   template:
     src: files/dconf.txt
