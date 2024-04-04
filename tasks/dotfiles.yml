@@ -29,4 +29,14 @@
   copy:
     src: mimeapps.list
     dest: ~/.config/mimeapps.list
-  
+- name: Configuring Lofree keyboard
+  become: true
+  copy:
+    src: lofree.conf
+    dest: /etc/modprobe.d/lofree.conf
+  register: lofree
+- name: Updating cpio for lofree
+  when: lofree.changed == true
+  become: true
+  shell:
+    cmd: mkinitcpio -P
