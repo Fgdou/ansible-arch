@@ -61,7 +61,10 @@ cinnamon_packages:
   - xviewer
   - xreader
   - papirus-icon-theme
+  - noto-fonts
   - noto-fonts-emoji
+  - noto-fonts-cjk 
+  - noto-fonts-extra
   - blueberry
   - gnome-calculator
   - nemo-fileroller
