@@ -42,9 +42,9 @@ base_packages:
   - firefox
   - rustup
   - virt-manager
-  - jre17-openjdk
   - jdk17-openjdk
   - gimp
+  - audacity
 
 user_packages:
   - google-chrome
