@@ -1,0 +1,23 @@
+---
+- name: Stopping pulseaudio
+  become: true
+  ignore_errors: true
+  service:
+    name: pulseaudio
+    enabled: false
+    state: stopped
+- name: Uninstalling pulseaudio
+  become: true
+  pacman:
+    name: 
+    - pulseaudio
+    - pulseaudio-bluetooth
+    - pulseaudio-alsa
+    state: absent
+- name: Insalling pipewire
+  become: true
+  pacman:
+    name:
+    - pipewire
+    - pipewire-audio
+    - pipewire-pulse
