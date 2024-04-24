@@ -45,6 +45,7 @@ base_packages:
   - jdk17-openjdk
   - gimp
   - audacity
+  - android-tools
 
 user_packages:
   - google-chrome
