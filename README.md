@@ -4,13 +4,15 @@ This ansible is used for the setup of my Arch-Linux machines. This ensure replic
 
 # Requirements
 1. internet connection
-2. user `fgdou`
-3. do:
-    - `pacman-key --populate`
-    - `sudo pacman -Sy sudo make`
+```shell
+pacman-key --populate
+sudo pacman -Sy make git
+git clone https://github.com/Fgdou/ansible-arch
+cd ansible-arch
+make install
+```
 
 # Run
 ```shell
-make install
 make run
 ```
