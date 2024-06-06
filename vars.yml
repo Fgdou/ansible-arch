@@ -38,7 +38,6 @@ base_packages:
   - obs-studio
   - kdenlive
   - steam
-  - teamviewer
   - firefox
   - rustup
   - virt-manager
@@ -51,6 +50,8 @@ user_packages:
   - google-chrome
   - visual-studio-code-bin
   - prismlauncher-qt5-bin
+  - teamviewer
+  - xviewer
 
 cinnamon_packages:
   - cinnamon
@@ -59,7 +60,6 @@ cinnamon_packages:
   - lightdm-gtk-greeter
   - gnome-screenshot
   - alsa-utils
-  - xviewer
   - xreader
   - papirus-icon-theme
   - noto-fonts
