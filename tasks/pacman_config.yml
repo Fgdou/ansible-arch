@@ -10,6 +10,7 @@
   pacman:
     state: present
     name: reflector
+    update_cache: true
   register: reflector
 - name: Updating mirrorlist
   become: true
