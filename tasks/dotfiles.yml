@@ -4,31 +4,31 @@
     path: "{{ item }}"
     state: directory
   loop:
-    - ~/.ssh
-    - ~/.config
-    - ~/.config/git
-    - ~/.config/discord
+    - "/home/{{ user }}/.ssh"
+    - "/home/{{ user }}/.config"
+    - "/home/{{ user }}/.config/git"
+    - "/home/{{ user }}/.config/discord"
 - name: Configuring .bashrc
   template:
     src: files/.bashrc
-    dest: ~/.bashrc
+    dest: "/home/{{ user }}/.bashrc"
 - name: COnfiguring ssh
   copy:
     src: files/ssh_config
-    dest: ~/.ssh/config
+    dest: "/home/{{ user }}/.ssh/config"
 - name: Configuring git
   copy:
     src: files/git_config
-    dest: ~/.config/git/config
+    dest: "/home/{{ user }}/.config/git/config"
 - name: Configuring discord
   copy:
     src: discord_settings.json
-    dest: ~/.config/discord/settings.json
+    dest: "/home/{{ user }}/.config/discord/settings.json"
     force: false
 - name: Configuring mimeapps
   copy:
     src: mimeapps.list
-    dest: ~/.config/mimeapps.list
+    dest: "/home/{{ user }}/.config/mimeapps.list"
 - name: Configuring Lofree keyboard
   become: true
   copy:
