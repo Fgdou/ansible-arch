@@ -12,6 +12,7 @@
   when: yay.rc != 0
 - name: Installing yay
   become_user: "{{ user }}"
+  become: yes
   shell:
     cmd: cd /tmp/yay-bin && makepkg -sif --noconfirm
   when: yay.rc != 0
