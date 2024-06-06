@@ -5,7 +5,7 @@ This ansible is used for the setup of my Arch-Linux machines. This ensure replic
 # Requirements
 1. internet connection
 ```shell
-pacman-key --populate
+sudo pacman-key --populate
 sudo pacman -Sy make git
 git clone https://github.com/Fgdou/ansible-arch
 cd ansible-arch
