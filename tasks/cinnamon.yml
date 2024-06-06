@@ -16,6 +16,7 @@
 - name: Installing cinnamon packages
   become: true
   pacman:
+    update_cache: true
     name: "{{ cinnamon_packages }}"
 - name: Enabling lightdm
   become: true

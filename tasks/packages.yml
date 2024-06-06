@@ -6,6 +6,7 @@
     name: "{{ user_packages }}"
     use: yay
     state: present
+    update_cache: true
 - name: Enabling services
   become: true
   service:

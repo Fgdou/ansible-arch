@@ -2,4 +2,5 @@
 - name: Installing pacman packages
   become: true
   pacman:
+    update_cache: true
     name: "{{ base_packages }}"
