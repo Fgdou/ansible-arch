@@ -3,6 +3,10 @@
   become: yes
   group:
     name: sudo
+- name: Create docker groups
+  become: yes
+  group:
+    name: docker
 - name: Create user
   become: yes
   user:
