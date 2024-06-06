@@ -10,6 +10,10 @@
     repo: https://aur.archlinux.org/yay-bin.git
     dest: /tmp/yay-bin
   when: yay.rc != 0
+- name: Installing yay
+  shell:
+    cmd: cd /tmp/yay-bin && makepkg -sif --noconfirm
+  when: yay.rc != 0
 - name: Creating aur_builder user
   become: yes
   ansible.builtin.user:
@@ -24,9 +28,3 @@
     create: yes
     mode: 0644
     validate: 'visudo -cf %s'
-- name: Installing yay
-  become_user: aur_builder
-  become: yes
-  shell:
-    cmd: cd /tmp/yay-bin && makepkg -sif --noconfirm
-  when: yay.rc != 0
