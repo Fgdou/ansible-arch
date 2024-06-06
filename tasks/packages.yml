@@ -12,12 +12,3 @@
     name: "{{ item }}"
     enabled: true
   loop: "{{ service_list }}"
-- name: Creating ssh folder
-  file:
-    path: /home/{{ user }}/.ssh
-    state: directory
-- name: Creating OpenSSH key
-  community.crypto.openssh_keypair:
-    path: /home/{{ user }}/.ssh/id_ed25519
-    regenerate: never
-    type: ed25519

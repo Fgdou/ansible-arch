@@ -12,7 +12,7 @@
   template:
     src: files/.bashrc
     dest: "/home/{{ user }}/.bashrc"
-- name: COnfiguring ssh
+- name: Configuring ssh
   copy:
     src: files/ssh_config
     dest: "/home/{{ user }}/.ssh/config"

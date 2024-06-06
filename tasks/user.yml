@@ -1,0 +1,16 @@
+---
+- name: Create sudo group
+  become: yes
+  group:
+    name: sudo
+- name: Create user
+  become: yes
+  user:
+    create_home: true
+    generate_ssh_key: true
+    ssh_key_type: ed25519
+    groups:
+      - sudo
+      - docker
+    name: "{{ user }}"
+    password: ""
