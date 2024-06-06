@@ -1,7 +1,7 @@
 all: run
 
 install:
-	sudo pacman -S git ansible ansible-core
+	sudo pacman -Sy git ansible ansible-core
 	ansible-galaxy install -r requirements.yml
 
 run:
