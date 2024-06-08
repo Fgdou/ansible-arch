@@ -13,11 +13,11 @@
     create_home: true
     generate_ssh_key: true
     ssh_key_type: ed25519
+    password: "{{ user_password }}"
     groups:
       - sudo
       - docker
     name: "{{ user }}"
-    password: ""
 - name: Allow 'sudo' group to have passwordless sudo
   become: true
   lineinfile:
