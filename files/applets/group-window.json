@@ -163,7 +163,7 @@
             "org.gnome.Terminal.desktop"
         ],
         "value": [
-            "google-chrome.desktop",
+            "firefox.desktop",
             "nemo.desktop",
             "org.gnome.Terminal.desktop"
         ]
