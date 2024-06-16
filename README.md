@@ -16,3 +16,8 @@ make install
 ```shell
 make run
 ```
+
+# Update pacman repositories
+```shell
+make reflector
+```
