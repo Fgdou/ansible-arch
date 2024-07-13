@@ -8,6 +8,7 @@
     - "/home/{{ user }}/.config"
     - "/home/{{ user }}/.config/git"
     - "/home/{{ user }}/.config/discord"
+    - "/home/{{ user }}/.config/zed"
 - name: Configuring .bashrc
   template:
     src: files/.bashrc
@@ -46,3 +47,7 @@
     path: /etc/profile.d/use-xinput2.sh
     create: true
     line: export MOZ_USE_XINPUT2=1
+- name: Copy Zed settings
+  copy:
+    src: zed_settings.json
+    dest: /home/{{ user }}/.config/zed/settings.json
