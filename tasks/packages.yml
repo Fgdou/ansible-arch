@@ -1,6 +1,6 @@
 ---
 - name: Installing aur packages
-  become: yes
+  become: true
   become_user: aur_builder
   kewlfft.aur.aur:
     name: "{{ user_packages }}"
