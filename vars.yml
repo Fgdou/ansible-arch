@@ -46,6 +46,7 @@ base_packages:
   - gimp
   - audacity
   - android-tools
+  - zed
 
 user_packages:
   - google-chrome
@@ -65,7 +66,7 @@ cinnamon_packages:
   - papirus-icon-theme
   - noto-fonts
   - noto-fonts-emoji
-  - noto-fonts-cjk 
+  - noto-fonts-cjk
   - noto-fonts-extra
   - blueberry
   - gnome-calculator
