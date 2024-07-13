@@ -40,3 +40,9 @@
   become: true
   shell:
     cmd: mkinitcpio -P
+- name: Configuring scroll in Firefox
+  become: true
+  lineinfile:
+    path: /etc/profile.d/use-xinput2.sh
+    create: true
+    line: export MOZ_USE_XINPUT2=1
