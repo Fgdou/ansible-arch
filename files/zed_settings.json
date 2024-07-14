@@ -15,5 +15,6 @@
     "dark": "One Dark"
   },
   "autosave": "on_focus_change",
-  "auto_update": false
+  "auto_update": false,
+  "format_on_save": "off"
 }
