@@ -6,7 +6,3 @@ Host plerin
 	HostName plerin.fgdou.ovh
 	User fgdou
 	Port 2244
-Host cloud
-        HostName 88.99.253.171
-        User fgdou
-        Port 46254
