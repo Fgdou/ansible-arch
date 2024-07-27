@@ -3,7 +3,7 @@ Host nas
 	User fgdou
 	Port 28762
 Host nas-local
-	HostName 10.0.0.1
+	HostName 10.0.0.2
 	User fgdou
 	Port 28762
 Host plerin
