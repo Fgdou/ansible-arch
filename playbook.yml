@@ -12,3 +12,4 @@
     - import_tasks: tasks/packages.yml
     - import_tasks: tasks/audio.yml
     - import_tasks: tasks/dotfiles.yml
+    - import_tasks: tasks/neovim.yml

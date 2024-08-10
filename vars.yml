@@ -1,6 +1,5 @@
 user: fgdou
 user_password: $y$j9T$g0l1fBtvtkIO8WiIqJZ3n.$0JCZd3IWNL1dC.V6LNxdlqBieTeRvl5ShU4qImErBT7
-ansible_become_pass: $y$j9T$g0l1fBtvtkIO8WiIqJZ3n.$0JCZd3IWNL1dC.V6LNxdlqBieTeRvl5ShU4qImErBT7
 
 base_packages:
   - base
