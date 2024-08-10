@@ -1,4 +1,5 @@
 - name: Install neovim
+  become: true
   pacman:
     name: neovim
 - name: Create nvim dir
@@ -12,3 +13,11 @@
   copy:
     src: nvim-init-lazy.lua
     dest: "/home/{{ user}}/.config/nvim/init.lua"
+- name: Install rust analyzer
+  become: true
+  pacman:
+    name: rust-analyzer
+- name: Install ansible language server
+  become: true
+  pacman:
+    name: ansible-language-server
