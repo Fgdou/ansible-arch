@@ -3,7 +3,7 @@
   become: true
   become_user: aur_builder
   kewlfft.aur.aur:
-    name: "{{ user_packages }}"
+    name: "{{ yay_packages }}"
     use: yay
     state: present
     update_cache: true
