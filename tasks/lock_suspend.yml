@@ -1,0 +1,12 @@
+---
+- name: create user-suspend service
+  become: true
+  copy:
+    src: suspend_lock.service
+    dest: /etc/systemd/system/user-suspend@.service
+- name: enable sleep service
+  become: true
+  systemd_service:
+    name: "user-suspend@{{ user }}.service"
+    enabled: true
+    daemon_reload: true
