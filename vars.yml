@@ -47,6 +47,7 @@ base_packages:
   - audacity
   - android-tools
   - zed
+  - less
 
 yay_packages:
   - google-chrome
