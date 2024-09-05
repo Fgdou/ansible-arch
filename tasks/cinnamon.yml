@@ -12,6 +12,7 @@
     - /home/{{ user }}/.config/cinnamon/spices/power@cinnamon.org
     - /home/{{ user }}/.config/cinnamon/spices/grouped-window-list@cinnamon.org
     - /home/{{ user }}/.config/cinnamon/spices/calendar@cinnamon.org
+    - /home/{{ user }}/.config/cinnamon/spices/menu@cinnamon.org
     - /home/{{ user }}/.themes
 - name: Installing cinnamon packages
   become: true
@@ -57,6 +58,10 @@
   copy:
     src: applets/group-window.json
     dest: /home/{{ user }}/.config/cinnamon/spices/grouped-window-list@cinnamon.org/2.json
+- name: Configuring menu applet
+  copy:
+    src: applets/menu.json
+    dest: /home/{{ user }}/.config/cinnamon/spices/menu@cinnamon.org/0.json
 - name: Configuring calendar applet
   copy:
     src: applets/calendar.json
