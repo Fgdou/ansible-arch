@@ -159,11 +159,11 @@
         "type": "generic",
         "default": [
             "nemo.desktop",
-            "firefox.desktop",
+            "zen-browser.desktop",
             "org.gnome.Terminal.desktop"
         ],
         "value": [
-            "firefox.desktop",
+            "zen-browser.desktop",
             "nemo.desktop",
             "org.gnome.Terminal.desktop"
         ]
