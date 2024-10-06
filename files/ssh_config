@@ -10,3 +10,6 @@ Host plerin
 	HostName plerin.fgdou.ovh
 	User fgdou
 	Port 2244
+Host vps
+    HostName 54.36.182.50
+    User fgdou
