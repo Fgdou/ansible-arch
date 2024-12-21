@@ -12,4 +12,5 @@ Host plerin
 	Port 2244
 Host vps
     HostName 54.36.182.50
-    User fgdou
+    User debian
+	Port 2244
