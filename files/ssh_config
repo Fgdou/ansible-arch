@@ -14,3 +14,4 @@ Host vps
     HostName 54.36.182.50
     User debian
 	Port 2244
+	IdentityFile bitwarden
