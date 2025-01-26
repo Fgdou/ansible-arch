@@ -55,7 +55,6 @@ yay_packages:
   - prismlauncher-qt5-bin
   - teamviewer
   - xviewer
-  - zen-browser-bin
 
 cinnamon_packages:
   - cinnamon
