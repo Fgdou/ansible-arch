@@ -10,6 +10,8 @@ base_packages:
   - dhcpcd
   - networkmanager
   - openssh
+  - ansible
+  - ansible-lint
   - vim
   - git
   - tree
