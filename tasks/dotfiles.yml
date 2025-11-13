@@ -9,6 +9,10 @@
     - "/home/{{ user }}/.config/git"
     - "/home/{{ user }}/.config/discord"
     - "/home/{{ user }}/.config/zed"
+- name: Configuring .bash_git
+  copy:
+    src: files/.bash_git
+    dest: "/home/{{ user }}/.bash_git"
 - name: Configuring .bashrc
   template:
     src: files/.bashrc
