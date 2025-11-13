@@ -50,11 +50,11 @@ base_packages:
   - android-tools
   - zed
   - less
+  - prismlauncher
 
 yay_packages:
   - google-chrome
   - visual-studio-code-bin
-  - prismlauncher-qt5-bin
   - teamviewer
   - xviewer
 
