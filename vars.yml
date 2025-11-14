@@ -58,6 +58,7 @@ yay_packages:
   - visual-studio-code-bin
   - teamviewer
   - xviewer
+  - localsend-bin
 
 cinnamon_packages:
   - cinnamon
