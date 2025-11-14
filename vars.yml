@@ -56,7 +56,6 @@ base_packages:
 yay_packages:
   - google-chrome
   - visual-studio-code-bin
-  - teamviewer
   - xviewer
   - localsend-bin
 
