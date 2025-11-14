@@ -84,7 +84,6 @@ cinnamon_applets:
 service_list:
   - sshd
   - NetworkManager
-  - teamviewerd
   - bluetooth
   - docker
   - systemd-timesyncd
