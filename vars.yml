@@ -52,6 +52,11 @@ base_packages:
   - less
   - prismlauncher
   - blender
+  - gnome-keyring
+  - fastfetch
+  - nextcloud-client
+  - bitwarden
+  - openrgb
 
 yay_packages:
   - google-chrome
