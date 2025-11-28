@@ -63,6 +63,7 @@ yay_packages:
   - visual-studio-code-bin
   - xviewer
   - localsend-bin
+  - ulauncher
 
 cinnamon_packages:
   - cinnamon

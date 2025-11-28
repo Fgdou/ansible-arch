@@ -1,0 +1,92 @@
+{
+    "76672daf-4035-4332-8152-18a82f420d15": {
+        "id": "76672daf-4035-4332-8152-18a82f420d15",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1764263994.3224568
+    },
+    "6a118f5c-746d-47b8-8493-e2e40237d402": {
+        "id": "6a118f5c-746d-47b8-8493-e2e40237d402",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "https://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1764263994.3224669
+    },
+    "68304259-a8a8-4515-97ca-f4dbeb3b0fc7": {
+        "id": "68304259-a8a8-4515-97ca-f4dbeb3b0fc7",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1764263994.3224728
+    },
+    "54b9aabd-c66c-44f7-99ec-06606049d932": {
+        "id": "54b9aabd-c66c-44f7-99ec-06606049d932",
+        "name": "Gmail",
+        "keyword": "gmail",
+        "cmd": "https://gmail.com",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1764347418.8227088
+    },
+    "69b807ff-2d49-417a-a339-610a6cc95d3e": {
+        "id": "69b807ff-2d49-417a-a339-610a6cc95d3e",
+        "name": "Calendar",
+        "keyword": "cal",
+        "cmd": "https://calendar.google.com",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1764347441.5566308
+    },
+    "202f0b3b-8265-4e26-802a-09656d7d52ee": {
+        "id": "202f0b3b-8265-4e26-802a-09656d7d52ee",
+        "name": "Jellyfin",
+        "keyword": "films",
+        "cmd": "https://films.fgdou.ovh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1764347458.3419135
+    },
+    "b9f7dca2-ac0d-42e1-8d94-c6eb2f17847f": {
+        "id": "b9f7dca2-ac0d-42e1-8d94-c6eb2f17847f",
+        "name": "HomeAssistant",
+        "keyword": "dash",
+        "cmd": "https://dash.fgdou.ovh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1764347470.7801144
+    },
+    "612afbce-64b0-4e9c-9bdf-8a0ac840f07b": {
+        "id": "612afbce-64b0-4e9c-9bdf-8a0ac840f07b",
+        "name": "Whatsapp",
+        "keyword": "wa",
+        "cmd": "https://web.whatsapp.com/",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1764347490.4577038
+    },
+    "0534ee1f-e28a-47e9-9ab2-a92064f5dbb0": {
+        "id": "0534ee1f-e28a-47e9-9ab2-a92064f5dbb0",
+        "name": "Google messages",
+        "keyword": "mess",
+        "cmd": "https://messages.google.com/",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1764347507.838961
+    }
+}

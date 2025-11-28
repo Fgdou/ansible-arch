@@ -1,0 +1,16 @@
+{
+    "com.github.ulauncher.ulauncher-emoji": {
+        "id": "com.github.ulauncher.ulauncher-emoji",
+        "url": "https://github.com/Ulauncher/ulauncher-emoji",
+        "updated_at": "2025-11-27T18:21:05.330121",
+        "last_commit": "195d167ea0cfdbb2169906b5acaac8097db84767",
+        "last_commit_time": "2025-10-05T04:07:23"
+    },
+    "com.github.kuenzelit.ulauncher-firefox-bookmarks": {
+        "id": "com.github.kuenzelit.ulauncher-firefox-bookmarks",
+        "url": "https://github.com/KuenzelIT/ulauncher-firefox-bookmarks",
+        "updated_at": "2025-11-28T17:24:57.636487",
+        "last_commit": "6ad3d3164304faba358d9dfc89a6b664f6b0f747",
+        "last_commit_time": "2025-02-12T17:18:37"
+    }
+}

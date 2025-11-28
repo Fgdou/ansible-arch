@@ -1,0 +1,14 @@
+---
+- name: Config folder exists
+  file:
+    path: "/home/{{ user }}/.config"
+    state: directory
+- name: Link file {{ item }} of ulauncher folder
+  file:
+    path: "/home/{{ user }}/.config/ulauncher/{{ item }}"
+    src: "{{playbook_dir}}/files/ulauncher/{{ item }}"
+    state: link
+  loop:
+    - extensions.json
+    - settings.json
+    - shortcuts.json

@@ -5,12 +5,24 @@
     - vars.yml
   tasks:
     - import_tasks: tasks/pacman_config.yml
+      tags: pacman_config
     - import_tasks: tasks/base_packages.yml
+      tags: base_packages
     - import_tasks: tasks/user.yml
+      tags: user
     - import_tasks: tasks/yay_install.yml
+      tags: yay_install`
     - import_tasks: tasks/cinnamon.yml
+      tags: cinnamon
     - import_tasks: tasks/packages.yml
+      tags: packages
     - import_tasks: tasks/audio.yml
+      tags: audio
     - import_tasks: tasks/dotfiles.yml
+      tags: dotfiles
     - import_tasks: tasks/neovim.yml
+      tags: neovim
     - import_tasks: tasks/lock_suspend.yml
+      tags: lock_suspend
+    - import_tasks: tasks/ulauncher.yml
+      tags: ulauncher
