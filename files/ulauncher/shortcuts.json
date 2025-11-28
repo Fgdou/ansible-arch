@@ -88,5 +88,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1764347507.838961
+    },
+    "ac87af29-6cd7-463a-b2c7-907fbb6135f5": {
+        "id": "ac87af29-6cd7-463a-b2c7-907fbb6135f5",
+        "name": "Nextcloud",
+        "keyword": "next",
+        "cmd": "https://nextcloud.fgdou.ovh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1764353443.61159
     }
 }
