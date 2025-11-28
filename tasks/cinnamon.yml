@@ -49,7 +49,7 @@
 - name: Configuring system monitor applet
   copy:
     src: applets/applet_perf.json
-    dest: /home/{{ user }}/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23/prefs.json
+    dest: /home/{{ user }}/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23/multicore-sys-monitor@ccadeptic23.json
 - name: Configuring power applet
   copy:
     src: applets/power.json

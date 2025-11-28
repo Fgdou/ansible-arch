@@ -10,35 +10,41 @@
     - "/home/{{ user }}/.config/discord"
     - "/home/{{ user }}/.config/zed"
 - name: Configuring .bash_git
-  copy:
-    src: files/.bash_git
-    dest: "/home/{{ user }}/.bash_git"
+  file:
+    src: "{{playbook_dir}}/files/.bash_git"
+    path: "/home/{{ user }}/.bash_git"
+    state: link
 - name: Configuring .bashrc
   template:
     src: files/.bashrc
     dest: "/home/{{ user }}/.bashrc"
 - name: Configuring ssh
-  copy:
-    src: files/ssh_config
-    dest: "/home/{{ user }}/.ssh/config"
+  file:
+    src: "{{playbook_dir}}/files/ssh_config"
+    path: "/home/{{ user }}/.ssh/config"
+    state: link
 - name: Configuring git
-  copy:
-    src: files/git_config
-    dest: "/home/{{ user }}/.config/git/config"
+  file:
+    src: "{{playbook_dir}}/files/git_config"
+    path: "/home/{{ user }}/.config/git/config"
+    state: link
 - name: Configuring discord
   copy:
     src: discord_settings.json
     dest: "/home/{{ user }}/.config/discord/settings.json"
     force: false
 - name: Configuring mimeapps
-  copy:
-    src: mimeapps.list
-    dest: "/home/{{ user }}/.config/mimeapps.list"
+  file:
+    src: "{{playbook_dir}}/files/mimeapps.list"
+    path: "/home/{{ user }}/.config/mimeapps.list"
+    state: link
 - name: Configuring Lofree keyboard
   become: true
-  copy:
-    src: lofree.conf
-    dest: /etc/modprobe.d/lofree.conf
+  file:
+    src: "{{playbook_dir}}/files/lofree.conf"
+    path: /etc/modprobe.d/lofree.conf
+    state: link
+    owner: root
   register: lofree
 - name: Updating cpio for lofree
   when: lofree.changed == true
@@ -52,6 +58,7 @@
     create: true
     line: export MOZ_USE_XINPUT2=1
 - name: Copy Zed settings
-  copy:
-    src: zed_settings.json
-    dest: /home/{{ user }}/.config/zed/settings.json
+  file:
+    src: "{{playbook_dir}}/files/zed_settings.json"
+    path: /home/{{ user }}/.config/zed/settings.json
+    state: link
