@@ -98,5 +98,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1764353443.61159
+    },
+    "f11f6093-fdd9-4a41-89ba-08598e89f520": {
+        "id": "f11f6093-fdd9-4a41-89ba-08598e89f520",
+        "name": "Minecraft",
+        "keyword": "mine",
+        "cmd": "prismlauncher",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1764353669.4626415
     }
 }
