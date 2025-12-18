@@ -72,7 +72,7 @@
         "type": "keybinding",
         "description": "Keyboard shortcut to open and close the menu",
         "default": "Super_L::Super_R",
-        "value": "::"
+        "value": "Super_L::Super_R"
     },
     "menu-custom": {
         "type": "switch",
