@@ -20,8 +20,6 @@
       tags: audio
     - import_tasks: tasks/dotfiles.yml
       tags: dotfiles
-    - import_tasks: tasks/neovim.yml
-      tags: neovim
     - import_tasks: tasks/lock_suspend.yml
       tags: lock_suspend
     - import_tasks: tasks/ulauncher.yml
